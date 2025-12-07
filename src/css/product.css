@@ -101,6 +101,9 @@
 	flex-direction: column;
 	align-items: center;
 	flex-grow: 1;
+	justify-content: space-between;
+	
+
 }
 
 .name-bag {
@@ -120,6 +123,15 @@
 	text-align: center;
 	color: var(--color-scheme-1-text);
 	margin-bottom: 8px;
+	
+}
+
+#number-bag_2 {
+	width: 243px;
+}
+
+#number-bag_3 {
+	width: 294px;
 }
 
 .price {
