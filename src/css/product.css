@@ -156,6 +156,13 @@
 	font-size: 16px;
 	line-height: 160%;
 	color: var(--color-neutral-darkest);
+
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.buy:active {
+	border: 1px solid var(--color-emerald-darkest);
+	opacity: 0.6;
 }
 
 
@@ -207,5 +214,10 @@
 			min-width: 310px;
 	}
 
+	.buy:hover, 
+	.buy:focus {
+		border: 1px solid var(--color-neutral-darkest);
+		opacity: 0.5;
+	}
 	
 }
