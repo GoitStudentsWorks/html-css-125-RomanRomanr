@@ -64,6 +64,7 @@ input[type="email"] {
 .text-field:not(:placeholder-shown):invalid {
 	border: 1px solid var(--color-error-red);
 	background: var(--opacity-neutral-darkest-5);
+	transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .text-invalid {
@@ -73,6 +74,7 @@ input[type="email"] {
 	line-height: 1.6;
 	display: none;
 	color: var(--color-error-red);
+	transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .text-field:not(:placeholder-shown):invalid~.text-invalid {
@@ -97,6 +99,7 @@ input[type="email"] {
 	font-size: 16px;
 	line-height: 1.6;
 	color: var(--opacity-neutral-darkest-60);
+	transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-form {
@@ -112,7 +115,7 @@ input[type="email"] {
 	line-height: 1.6;
 	color: var(--color-white);
 	margin-bottom: 24px;
-	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-form:active {
@@ -172,7 +175,6 @@ input[type="email"] {
 
 	.response-textarea {
 		max-width: 644px;
-		transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 	}
 
 	.response-textarea:hover::placeholder,
@@ -182,7 +184,6 @@ input[type="email"] {
 
 	.button-form {
         max-width: 198px;
-		transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 	}
 
 	.button-form:hover,
