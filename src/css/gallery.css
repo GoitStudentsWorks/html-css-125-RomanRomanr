@@ -59,8 +59,7 @@
 /* Стилі пишемо нище цього коментаря */
 
 .gallery-container {
-	max-width: 320px;
-	margin: 0 auto;
+	min-width: 320px;
 	display: flex;
 	flex-direction: column;
 	gap: 24px;
@@ -87,20 +86,9 @@
 	text-decoration: none;
 }
 
-.gallery-item {
+.gallery-list {
 	display: flex;
-	flex-direction: column-reverse;
-	margin: 0 16px;
-}
-
-.gallery-item-part-1 {
-	display: flex;
-	flex-direction: column-reverse;
-}
-
-.gallery-item-part-2 {
-	display: flex;
-	flex-direction: column-reverse;
+	flex-direction: column;
 }
 
 
@@ -109,14 +97,12 @@
 	margin-bottom: 24px;
 }
 
-@media screen and (min-width: 321px) and (max-width: 767px) {
+@media screen and (min-width: 768px) {
 
 	.gallery-container {
-		max-width: 768px;
-		min-height: 1318px;
+		min-width: 768px;
 		display: flex;
 		background: var(--color-scheme-1-background);
-		position: relative;
 	}
 
 	.gallery-title {
@@ -139,29 +125,39 @@
 		text-decoration: none;
 	}
 
+		.gallery-list {
+			display: flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+			max-height: 1062px;
+			gap: 24px;
+			align-content: center;
+		}
+
 	.gallery-item {
-		display: flex;
-		gap: 24px;
-		flex-direction: row;
-		margin: 0 32px;
+		width: calc((100% - 26px) / 2);
+		height: auto;
 	}
 
-	.gallery-item-part-1 {
-		display: flex;
-		flex-direction: column;
+	.gallery-list-item-first {
+		order: 4;
 	}
 
-	.gallery-item-desc-big {
-		min-height: 700px;
-		object-fit: cover;
+	.gallery-list-item-second {
+		order: 3;
 	}
 
-	.gallery-item-part-2 {
-		display: block;
+	.gallery-list-item-three {
+		order: 2;
 	}
+
+	.gallery-list-item-four {
+		order: 1;
+	}
+
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1440px) {
 
 	.gallery {
 		display: flex;
@@ -192,32 +188,29 @@
 		margin-bottom: 32px;
 	}
 
+		.gallery-list {
+			max-width: 870px;
+			gap: 24px;
+		}
+
 	.gallery-item {
-		display: flex;
-		flex-direction: row;
-		gap: 24px;
+		width: calc((100% - 24px) / 3);
 	}
 
-	.gallery-item-part-1 .gallery-item-desc-big {
-		min-width: 421px;
-		min-height: 421px;
-	}
-
-	.gallery-item-part-1 {
-		display: block;
-	}
-
+	.gallery-list-item-first {
+			order: 2;
+		}
 	
+	.gallery-list-item-second {
+			order: 3;
+		}
+	
+	.gallery-list-item-three {
+			order: 4;
+		}
+	
+	.gallery-list-item-four {
+			order: 1;
+		}
 
-	.gallery-item-part-2 {
-		display: flex;
-		flex-direction: row;
-		gap: 24px;
-	}
-
-	.gallery-item-desc-big {
-		max-width: 421px;
-		min-height: 865px;
-		object-fit: cover;
-	}
 }
